@@ -6,8 +6,7 @@ So far, I have entered three math modeling competition including 2 HIMCM (High S
 2. [Data Collation and Analysis](./book/Data%20Collation%20and%20Analysis.md)
 3. [Model Choosing](./book/Model%20Choosing.md)
 4. [Visualization](./book/Visualization.md)
-5. [Sensitivity Analysis]()
-6. [Writing Methodology](./book/Writing%20Methodology.md)
+5. [Writing Methodology](./book/Writing%20Methodology.md)
 
 **Working Status**
 |Chapter                     |Status |
