@@ -17,7 +17,7 @@ Let's compare with *team #12821*'s data calibration.
 We calculate the value of $k$ by implementing the $H_{resource}$ and number of hives which is 51, into our model [12]. The value of $k$ we obtained is $4.17 × 10^{−5}$. Then, we utilize these parameters to calculate the number of hives needed for various types of crops in 81000 square meters.
 
 In order to observe the difference, the following table could clearly illustrate the difference.
-|Parameters                         |Values from chatGPT| Values from team calibration              | 
+|Parameters                         |Values from ChatGPT| Values from Team calibration              | 
 |-----------------------------------|---------------------------|-----------------------------------|
 |Flights per bee per day            |8–12                       |10                                 |
 |Duration per flight                |0.02–0.03 days (~30–45 min)|0.1 days (~2.4 h)                  |
@@ -26,5 +26,18 @@ In order to observe the difference, the following table could clearly illustrate
 |$\frac{\text{Amount of honeybee-produced-honey}}{\text{All the honey produced}}\; p$|0.25–0.3|0.35 |
 |Population of foragers             |15–25%                     |20%                                |
 
+From the table above, *duration per flight*, *hive population* and *the nectar to honey production rate* is out of the range provided by chatGPT. So, it is clear that the value evaluated by chatGPT for most of time is broadly reasonable but we still have to check with published datasets or experimental research to ensure reliability and the realism of data.
 
 ### Data Generation
+For some instances, the data is a little bit sensitive or there are few studies on current topics so that we could not get the whole dataset from website or even from the large language model. To address this issue, we could generate some data from the pattern we have observed. 
+Here is an example from my team (*Team #25981207*) in [2025 IMMC E](./problem/2025_IMMC_Problem_E.pdf) 
+>Wind Energy 
+The power output by wind turbines is represented by:
+$$P=\frac{1}{2}\cdot \rho A v^3 $$
+Assuming an average wind speed of around 10 $ms^{-1}$ and efficiency of 40% for
+modern wind turbines, a small windmill (100 − 200 $m^2$) can produce *7-8 kW*
+continuously. A wind farm may contain tens or up to one hundred small windmills.
+
+This problem asked us to create a power scheduling for a data center including both of electricity and computational power. This part illustrates how we estimate the power of wind turbines by starting from the general physical formula and then applying reasonable real-world assumptions supported by online resources. 
+
+In later stages, we often need to generate synthetic data to thoroughly test the model. Random functions can be used to create a large amount of testing data, but it is important to define realistic ranges to ensure the generated data corresponds to actual conditions. For some of the test data, we should deliberately design the extreme or boundary values as this values could reveal the weaknesses or limits of current model. So, this may help us to identify pathway to optimize the model or find more suitable method for current problem.
