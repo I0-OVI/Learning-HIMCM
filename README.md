@@ -12,7 +12,7 @@ So far, I have entered three math modeling competition including 2 HIMCM (High S
 |Chapter                     |Status |
 |----------------------------|-------|
 |Preparation                 | ✅   |
-|Data Collation and Analysis | 🚧   |
+|Data Collation and Analysis | ✅   |
 |Model Choosing              | 🚧   |
 |Visualization               | 🚧   |
 |Writing Methodology         | 🚧   |

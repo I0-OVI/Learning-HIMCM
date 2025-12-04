@@ -14,6 +14,21 @@ It seems to be similar to the Background part. But this part is asked you to ful
 This section illustrate your assumptions while building the model. This because the model is theoretical which could not consider all the factor in the real world. 
 Take an example: There is a problem about evacuation of firefighters in a building. If you want to simulate the behavior of them using a ABM (Agent-Based Model), you may ignore the destroy of construction of the building when rescuing. So, we have to write this in the assumption section and give a reason for why we ignore it. 
 
+**Case Study**
+[2024 Problem A](./problem/2024_HiMCM_Problem_A.pdf)
+I take the above part from the outstanding paper (*Team #15926*)
+This problem asked teams to choose several type of sports which will be added to next Olympic games. We have to build the model based on these factors:*Popularity and Accessibility*, *Gender Equity*, *Sustainability*, *Relevance and Innovation* and *Safety and Fair Play*. Let's start from **Background**.
+>The Olympic Games have long served as the world's most powerful symbol of athletic
+values and diversity. But as the dynamics of global sports and audience interest is
+constantly changing, the International Olympic Committee (IOC) had been
+continuously revising its evaluation process used to decide suitable sports, disciplines
+and events (SDEs), so that tournaments can match with the role. In the 2024 Paris
+Games, breaking made its debut, but the LA28 Games Plan also showed it would not
+be included in the upcoming Olympics. This obviously reflects how evaluation criteria
+changes rapidly, thus a sensible evaluation method that is able to accommodate the
+changes is crucial to a successful Olympics.
+
+This part is mainly about why the designed model is necessary to determine the SDEs to next Olympic games. Taking some real examples could make their model more realism. They have mentioned about the new SDEs appearing in the Paris Olympic and the influence of adding the specific SDE. 
 ### Model Explanation
 There are various ways to illustrate models but we have to illustrate with clear logics. More importantly, you have to justify *why* choose this model. It does not come from the chat boxes from GPT but from the data pattern and your understanding of different models. You have to know the trade-offs of your model and explain its advantages, acknowledge its limitations, and show how you optimize these weaknesses later to build a more robust solution.
 
