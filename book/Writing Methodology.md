@@ -57,7 +57,7 @@ In section *2.2.2*, this team highlighted an essential principle: the **Allee ef
 ### Visualization
 Since most of readers may find it **difficult** to follow the long formulae and text, visualization like charts and tables are crucial. Clear charts with concise explanation could significantly enhance understanding.
 Taking one chart from outstanding paper as an example:
-![image](./picture/1.png){width=60%}
+<img scr="./picture/1.png" width="60%">
 |Version1|Version2|
 |--------|--------|
 |The curves for a large system (N=90,000) and a small system (N=1,000) converge over time. Despite different initial rates, they reach the same outcome after sufficient days. This indicates that long-term results are independent of system scale.|This graph compares process evolution for a large system (N=90,000) and a small one (N=1,000) over days. The large system changes slowly and smoothly, while the small one reacts quickly. System size clearly impacts the speed and path of the process.|
@@ -67,7 +67,7 @@ I wrote two versions of explanation above. Version 2 is the one usually written 
 This is for single model and if there are many models, we have to state the relationship between these models, such as providing input and output, or simple and enhanced model before we introduce the single models.
 
 Maybe it is not obvious and there is another example.
-![image](./picture/2.png){width=60%}
+<img scr="./picture/2.png" width="60%">
 |Version1|Version2|
 |--------|--------|
 |By analyzing the niche overlap of each pet in the radar chart, several interesting pairing patterns can be observed. Cats and dogs show large overlapping areas in purchase cost and hygiene requirements, indicating that they are relatively compatible in terms of living conditions. Although hamsters and parrots are both small pets, their needs differ considerably—hamsters have low requirements for climate and space, while parrots demand much more in these aspects. The chart clearly shows that if a household can meet the needs of a dog, it can generally also meet the needs of a cat, providing useful guidance for families considering keeping both pets.| This radar chart displays the distribution of data for five types of pets across seven dimensions. From the data, dogs have the highest value (0.4) in community support and reach 0.3 in purchase cost. Cats perform prominently in both purchase and hygiene dimensions. Parrots show notably high values in the noise indicator, while hamsters have the lowest requirement for space. The indicators in the chart reflect the characteristic differences among species, and clear fluctuations exist across dimensions. Based on niche theory, the overlapping areas between species represent their degree of similarity, and we further explore the calculation of this similarity in the following sections.|
@@ -80,9 +80,9 @@ From the two examples above, it is clear that charts should be used with a clear
 First of all, we have to distinguish sensitivity analysis and model application. Model application means we have many scenarios and we apply our model to calculate an output values that problem asked for. Sensitivity analysis aims to adjust the input by adding or minus 10% to original input to test whether our model will have a significant change to the output. If the change is small, the model is considered to be robust.
 It is hard to explain what happens in this section. So I would give some examples.
 As shown in the graph below, **bar error charts** are a commonly used method to illustrate the robustness of model. The narrower the error bars, the more robust the model. The line in the middle represents the mean value or baseline.
-![image](./picture/3.png)
+<img scr="./picture/3.png" width="60%">
 Alternatively, we can use **tables** to show how the output changes after adjusting the inputs. I take a chart from *team #16159* in [2024 Problem A](./problem/2024_HiMCM_Problem_A.pdf).
-![image](./picture/4.png){width=60%}
+<img scr="./picture/4.png" width="60%">
 This problem asked teams to choose several type of sports which will be added to next Olympic games. In the figure above, only 3 sports swap rankings which is Handball, Football and sport climbing. The their original scores are very close, so slight changes in input would alter their orders. Let's see how this team explain this change.
 
 >Even though our scores were changed slightly, the overall ranking remained largely the same. A ranking that is very sensitive to weighting changes would be volatile and unreliable for decision-making. Since our results are consistent even under different weightings, our model withstands change well and is shown to be robust, so it can be applied for use in Olympics decision-making.
