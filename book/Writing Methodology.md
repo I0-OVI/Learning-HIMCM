@@ -80,7 +80,7 @@ From the two examples above, it is clear that charts should be used with a clear
 First of all, we have to distinguish sensitivity analysis and model application. Model application means we have many scenarios and we apply our model to calculate an output values that problem asked for. Sensitivity analysis aims to adjust the input by adding or minus 10% to original input to test whether our model will have a significant change to the output. If the change is small, the model is considered to be robust.
 It is hard to explain what happens in this section. So I would give some examples.
 As shown in the graph below, **bar error charts** are a commonly used method to illustrate the robustness of model. The narrower the error bars, the more robust the model. The line in the middle represents the mean value or baseline.
-<img src="./picture/1.png" width="60%">
+<img src="./picture/3.png" width="60%">
 Alternatively, we can use **tables** to show how the output changes after adjusting the inputs. I take a chart from *team #16159* in [2024 Problem A](./problem/2024_HiMCM_Problem_A.pdf).
 <img src="./picture/4.png" width="60%">
 This problem asked teams to choose several type of sports which will be added to next Olympic games. In the figure above, only 3 sports swap rankings which is Handball, Football and sport climbing. The their original scores are very close, so slight changes in input would alter their orders. Let's see how this team explain this change.
