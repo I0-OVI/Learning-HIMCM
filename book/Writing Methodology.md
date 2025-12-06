@@ -57,7 +57,7 @@ In section *2.2.2*, this team highlighted an essential principle: the **Allee ef
 ### Visualization
 Since most of readers may find it **difficult** to follow the long formulae and text, visualization like charts and tables are crucial. Clear charts with concise explanation could significantly enhance understanding.
 Taking one chart from outstanding paper as an example:
-<img scr="./picture/1.png" width="60%">
+<img scr="picture/1.png" width="60%">
 |Version1|Version2|
 |--------|--------|
 |The curves for a large system (N=90,000) and a small system (N=1,000) converge over time. Despite different initial rates, they reach the same outcome after sufficient days. This indicates that long-term results are independent of system scale.|This graph compares process evolution for a large system (N=90,000) and a small one (N=1,000) over days. The large system changes slowly and smoothly, while the small one reacts quickly. System size clearly impacts the speed and path of the process.|
