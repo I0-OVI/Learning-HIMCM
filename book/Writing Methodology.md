@@ -1,8 +1,8 @@
 # Writing Methodology
-1. Introduction
+**1. Introduction
 2. Model Explanation
 3. Visualization
-4. Sensitivity Analysis
+4. Sensitivity Analysis**
 
 
 ### Introduction
@@ -71,7 +71,7 @@ This is for single model and if there are many models, we have to state the rela
 
 Maybe it is not obvious and there is another example.
 <p align="center">
-    <img src="./picture/2.png" width="60%">
+    <img src="./picture/2.png" width="40%">
 
 |Version1|Version2|
 |--------|--------|
@@ -87,13 +87,13 @@ It is hard to explain what happens in this section. So I would give some example
 As shown in the graph below, **bar error charts** are a commonly used method to illustrate the robustness of model. The narrower the error bars, the more robust the model. The line in the middle represents the mean value or baseline.
 
 <p align="center">
-    <img src="./picture/3.png" width="60%">
+    <img src="./picture/3.png" width="80%">
 
 
 Alternatively, we can use **tables** to show how the output changes after adjusting the inputs. I take a chart from *team #16159* in [2024 Problem A](./problem/2024_HiMCM_Problem_A.pdf).
 <p align="center">
     <img src="./picture/4.png" width="60%">
-    
+
 This problem asked teams to choose several type of sports which will be added to next Olympic games. In the figure above, only 3 sports swap rankings which is Handball, Football and sport climbing. The their original scores are very close, so slight changes in input would alter their orders. Let's see how this team explain this change.
 
 >Even though our scores were changed slightly, the overall ranking remained largely the same. A ranking that is very sensitive to weighting changes would be volatile and unreliable for decision-making. Since our results are consistent even under different weightings, our model withstands change well and is shown to be robust, so it can be applied for use in Olympics decision-making.
