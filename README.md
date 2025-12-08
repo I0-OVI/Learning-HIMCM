@@ -7,12 +7,13 @@ So far, I have entered three math modeling competition including 2 HIMCM (High S
 3. [Model Choosing](./book/Model%20Choosing.md)
 4. [Visualization](./book/Visualization.md)
 5. [Writing Methodology](./book/Writing%20Methodology.md)
-
+6. [Case Study]()
 **Working Status**
 |Chapter                     |Status |
 |----------------------------|-------|
 |Preparation                 | ✅   |
 |Data Collation and Analysis | ✅   |
-|Model Choosing              | 🚧   |
+|Model Choosing              | ✅   |
 |Visualization               | 🚧   |
-|Writing Methodology         | 🚧   |
+|Writing Methodology         | ✅   |
+|Case Study                  | 🚧   |

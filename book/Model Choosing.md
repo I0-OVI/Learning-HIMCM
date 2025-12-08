@@ -18,5 +18,8 @@ movement paths, (3) Goal is to visit all nodes in minimum time. However, traditi
 scenarios)
 **3** The optimal strategy depends on the graph structure (GNN helps generalize)
 RL offers several advantages, including **(1)** learning from experience, where the agent discovers strategies through trial and error, **(2)** can handle the complexity of multi-objective problems, and **(3)** GNN architecture allows the model to work on different floor plans.
+<p align="center">
+<img src="./picture/6.png" width="40%">
+
 
 However, unfortunately, they fail to apply this method to more complex scenarios. As a result, they eventually incorporated an Agent-Based Model (ABM) to simulate fire spread and responder movement. They came very close to producing the real-world optimal solution. Complex method achieves higher but the simple method is better start.

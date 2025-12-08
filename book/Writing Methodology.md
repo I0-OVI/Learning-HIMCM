@@ -54,6 +54,7 @@ I take one of the outstanding paper's content of model explanation(*Team # 12821
 In this problem, teams are asked to predict population of one honey bee colony based on different factors such as lifespans, egg laying rates, fertilized/unfertilized egg ratios. This represents standard workflow: starting with a primary model and then adding factors to model to meet the requirements. 
 In section *2.2.2*, this team highlighted an essential principle: the **Allee effect**. This principle forms the theoretical foundation of their formulae and algorithms, so it has to be explained clearly and briefly in report. When our model relies on a scientific principle, we must introduce it and explain the relevance.
 
+This part focuses on the structure of model explanation. Model explanation involves many techniques and I split them into different chapters. So maybe you will see similar contents but with different respect
 ### Visualization
 Since most of readers may find it **difficult** to follow the long formulae and text, visualization like charts and tables are crucial. Clear charts with concise explanation could significantly enhance understanding.
 Taking one chart from outstanding paper as an example:
