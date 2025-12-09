@@ -46,5 +46,15 @@ This section has limited opportunities for visualization. The only thing we coul
 <p align="center">
     <img src="./picture/8.png" width="80%">
 
-Many of people underestimate the value of this sort of visualization. A clear workflow chart not only helps readers understand how your model is constructed and the relationship between each modules but also makes it easier for your team to manage progress during competition. Here are few suggestions when creating this graph. I recommend using an online editor such as draw.io since it was downloaded with editable png files which is very convenient when revision is required. Besides, the size of the texts is crucial. If labels are too small to read without zooming, the chart will lose its purpose and occupies the valuable place in your report.
+Many of people underestimate the value of this sort of visualization. A clear workflow chart not only helps readers understand how your model is constructed and the relationship between each modules but also makes it easier for your team to manage progress during competition. Here are few suggestions when creating this graph. I recommend using an online editor such as draw.io since it was downloaded with editable png files which is very convenient when revision is required. Besides, the size of the texts is crucial. If labels are too small to read without zooming, the chart will lose its purpose and occupies the valuable place in your report. 
+
+#### Data Calibration
+Some of the teams may present their model first since they want to capture the reader's attention by their innovated models. As a result, the calibration part will be placed after whole model explanation part. This does not follow the natural thought. Imaging you are going to build a prediction model for a large dataset. The first step should be to have a data washing to filter some abnormal features or take some analysis for these abnormal values. The second step is to find out some patterns for this dataset and attempt to search a relevant model for the current data. So you see, this is the natural workflow/
+#### Model Explanation
+**Model Workflow** 
+As shown in the following graph, the process of the model is demonstrated by the similar technique used previously. By observing the flowchart, all the complicated working is represented by the rectangles hiding the complexities/detailed information of model and shows the clear workflow with all relevant inputs and outputs.
+<p align="center">
+    <img src="./picture/9.png" width="70%">
+
+**Data Change**
 
