@@ -15,5 +15,5 @@ This repository is a learning resource for mathematical modeling competitions (H
 |Preparation                 | ✅   |
 |Data Collation and Analysis | ✅   |
 |Model Choosing              | ✅   |
-|Visualization               | 🚧   |
-|Writing Methodology         | 🚧   |
+|Visualization               | ✅   |
+|Writing Methodology         | ✅   |
