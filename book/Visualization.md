@@ -49,11 +49,13 @@ This section has limited opportunities for visualization. The only thing we coul
 Many of people underestimate the value of this sort of visualization. A clear workflow chart not only helps readers understand how your model is constructed and the relationship between each modules but also makes it easier for your team to manage progress during competition. Here are few suggestions when creating this graph. I recommend using an online editor such as draw.io since it was downloaded with editable png files which is very convenient when revision is required. Besides, the size of the texts is crucial. If labels are too small to read without zooming, the chart will lose its purpose and occupies the valuable place in your report. 
 
 #### Data Analysis and Calibration
-Some of the teams may present their model first since they want to capture the reader's attention by their innovated models. As a result, the data analysis and calibration part will be placed after whole model explanation part. This structure doesn't fully follow with the natural reasoning process of data-driven modelling. 
+In [writing methodology part](Writing%20Methodology.md), I illustrate the whole process of data analysis and calibration. When we want to observe the patterns between some features, histogram could demonstrate the patterns clearly as shown below. 
+<img src="./picture/11.png">
+From the chart above, we could easily to observe one pattern: people who are cryosleeping have very high probability to be transported.
 
-Imagine you are building a prediction model for a complex dataset. Here is a [sample table](./table/1.csv). The first step is always data washing. We may use the filters in the excel to check whether there are missing values. Alternatively, the python is effective when processing large dataset, since some csv files may contain too many rows which cannot be fully displayed in the excel. The common method is to fill missing values by the mode or the mean value. The next step is to identify some patterns between each feature. If you open the table above and examine it, you will notice that people who are transported tend to have a true value in column "CryoSleep". This kind of pattern will help you to choose model or verify the performance of the model. Would you think the next is to choose the model? You can but the model will not perform well since some of the features would be 'similar' which means their vector in n-dimension space are very close to each other. As the result, the model will perform unstably since the noise from similar features may be amplified. This issue could be addressed by feature engineering, which includes removing redundant features and constructing new features from the existing table.
-
-So, you see. This is the overall workflow as well as the normal process of data modeling. 
+When we want to remove some features, the heat table should be shown to illustrate the relevance of two features. If the value of intersection point is very close to 1, two features are highly positive correlated and if they are close to -1, this means these two features are highly negative correlated. The positive one may amplify the effect of noise and the negative one may lead features partially cancel out each other.
+<p align = "center">
+<img src="./picture/12.png" width="60%">
 
 #### Model Explanation
 **Model Workflow** 

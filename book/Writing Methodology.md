@@ -1,8 +1,9 @@
 # Writing Methodology
 **1. Introduction
 2. Model Explanation
-3. Visualization
-4. Sensitivity Analysis**
+3. Data Analysis and Calibration
+4. Visualization
+5. Sensitivity Analysis**
 
 
 ### Introduction
@@ -29,6 +30,14 @@ changes rapidly, thus a sensible evaluation method that is able to accommodate t
 changes is crucial to a successful Olympics.
 
 This part is mainly about why the designed model is necessary to determine the SDEs to next Olympic games. Taking some real examples could make their model more realism. They have mentioned about the new SDEs appearing in the Paris Olympic and the influence of adding the specific SDE. 
+
+#### Data Analysis and Calibration
+Some of the teams may present their model first since they want to capture the reader's attention by their innovated models. As a result, the data analysis and calibration part will be placed after whole model explanation part. This structure doesn't fully follow with the natural reasoning process of data-driven modelling. 
+
+Imagine you are building a prediction model for a complex dataset. Here is a [sample table](./table/1.csv). The first step is always data washing. We may use the filters in the excel to check whether there are missing values. Alternatively, the python is effective when processing large dataset, since some csv files may contain too many rows which cannot be fully displayed in the excel. The common method is to fill missing values by the mode or the mean value. The next step is to identify some patterns between each feature. If you open the table above and examine it, you will notice that people who are transported tend to have a true value in column "CryoSleep". Alternatively, you could draw some charts using python. This kind of pattern will help you to choose model or verify the performance of the model. Would you think the next is to choose the model? You can but the model will not perform well since some of the features would be 'similar' which means their vector in n-dimension space are very close to each other. As the result, the model will perform unstably since the noise from similar features may be amplified. This issue could be addressed by feature engineering, which includes removing redundant features and constructing new features from the existing table.
+
+So, you see. This is the overall workflow as well as the normal process of data modeling. If you have complex modeling procedure or you introduce an innovated model, you could add something in the report like "For readability, we briefly outline the data preparation steps here, while detailed calibration and preprocessing are presented after the model description." and post your analysis and calibration work after illustrating your model.
+
 ### Model Explanation
 There are various ways to illustrate models but we have to illustrate with clear logics. More importantly, you have to justify *why* choose this model. It does not come from the chat boxes from GPT but from the data pattern and your understanding of different models. You have to know the trade-offs of your model and explain its advantages, acknowledge its limitations, and show how you optimize these weaknesses later to build a more robust solution.
 
