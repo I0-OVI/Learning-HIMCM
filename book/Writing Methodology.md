@@ -1,21 +1,21 @@
 # Writing Methodology
-**1. Introduction
-2. Model Explanation
-3. Data Analysis and Calibration
-4. Visualization
+**1. Introduction  
+2. Model Explanation  
+3. Data Analysis and Calibration  
+4. Visualization  
 5. Sensitivity Analysis**
 
 
 ### Introduction
-**1.1 Background**
+**1.1 Background**  
 This part should *brief restate the problem* that posed by HIMCM. It should explain why problem is important and model is required. Also, you could give a brief conclusion of your model.  
-**1.2 Problem Restatement**
+**1.2 Problem Restatement**  
 It seems to be similar to the Background part. But this part is asked you to fully list the *questions or tasks required by the problem*. It may include one question and a summary of related model.  
-**1.3 Assumption and Justification**
+**1.3 Assumption and Justification**  
 This section illustrate your assumptions while building the model. This because the model is theoretical which could not consider all the factor in the real world. 
 Take an example: There is a problem about evacuation of firefighters in a building. If you want to simulate the behavior of them using a ABM (Agent-Based Model), you may ignore the destroy of construction of the building when rescuing. So, we have to write this in the assumption section and give a reason for why we ignore it. 
 
-**Case Study**
+**Case Study**  
 [2024 Problem A](./problem/2024_HiMCM_Problem_A.pdf)  
 I take the above part from the outstanding paper (*Team #15926*)  
 This problem asked teams to choose several type of sports which will be added to next Olympic games. We have to build the model based on these factors:*Popularity and Accessibility*, *Gender Equity*, *Sustainability*, *Relevance and Innovation* and *Safety and Fair Play*. Let's start from **Background**.
