@@ -59,9 +59,44 @@ When we want to remove some features, the heat table should be shown to illustra
 
 #### Model Explanation
 **Model Workflow** 
-As shown in the following graph, the process of the model is demonstrated by the similar technique used previously. By observing the flowchart, all the complicated working is represented by the rectangles hiding the complexities/detailed information of model and shows the clear workflow with all relevant inputs and outputs.
+As shown in the following graph, the modeling process is illustrated using a workflow diagram similar to those introduced earlier. By observing the flowchart, all the complicated working is represented by the rectangles hiding detailed computations of model and shows the clear overall workflow with all relevant inputs and outputs.
 <p align="center">
     <img src="./picture/9.png" width="70%">
 
-**Data Change**
+**Your Model**
+The visualization is to simplify or summarize your content. So, it doesn't follow a very strict sequential flow. The only thing is to help reader understand your model. Alternatively, some teams prefer to present their work using many equations. There is a [report](./report/14995.pdf) (*Team #14995*) for [2024 problem A](./problem/2024_HiMCM_Problem_A.pdf) which is filled with mathematical derivation. If you like derivation-style explanation, you could learn from this report. Everyone has his/her preferred style to illustrate the problem. Personally, I recommend the visualization since my math is not strong enough and visualization is clear for me.
 
+Take some examples when illustrating your model:
+[2025 problem A](./problem/2025_HiMCM_Problem_A.pdf) 
+For this problem, our team first abstract the problem as a graph theory problem. Each room is abstracted as a node and the hallway connecting two room was represented as an edge. The weights of edges corresponds to the time required to travel between two rooms.The following graph illustrate how this method works.
+<img src="./picture/5.png">
+
+
+[2026 IMMC problem](./problem/2026_IMMC_Problem_A.pdf) (This competition was taken place in 2025 autumn.)
+If we want to explain why we choose cluster algorithm we could have a visualization of given data and add some advantages of it below the charts.  
+<img src="./picture/13.png">
+>Since constellations are formed by connecting stars that are close to each other in space, stars that are geographically or feature-wise near one another naturally belong to the same group. Clustering algorithms follow the same principle by grouping nearby data points into clusters based on distance or similarity. Therefore, using clustering allows us to automatically identify groups of neighboring stars that align well with how constellations are defined.
+
+[2024 problem A](./problem/2024_HiMCM_Problem_A.pdf)
+From *Team #15926*
+They use a method called AHP(Analytic Hierarchy Process) to give the weight of each factors. The structure is shown below. This could clearly illustrate what their model have done and the relationship between the current model and the final goal.
+<img src="./picture/15.png">
+
+
+**Data Change**
+Data change visualizations are often used to highlight trends, sensitivity, or the impact of key parameters. Rather than explaining the full mechanism of the model, these plots help readers quickly grasp what changes and why it matters.
+Take some examples:
+[2022 problem A](./problem/2022_HiMCM_Problem_A.pdf) 
+From *Team #12821*
+
+<p align = "center">
+    <img src="./picture/14.png" width="80%">
+
+>*We display the graphs below to show how the starting date $(t_0)$ affected the initial population. Varied (t_0) results in different initial population values. Despite the population’s diverse starting positions, every graph has revealed a consistent, recognizable pattern. The curves with various starting dates are identical when translated horizontally. **The curves are the same regardless of starting dates or initial populations and have a periodicity of 365 days (or one year). This illustrates the stability and validity of our seasonality model.***
+
+[2025 problem A](./problem/2025_HiMCM_Problem_A.pdf)
+From our team (*Team #16985*)
+<p align = "center">
+    <img src="./picture/16.png" width = "80%">
+
+>*With further analysis, we compared the rescue time of a single firefighting team with the smoke spread time corresponding to the human tolerance threshold. Two responders were generally able to complete the rescue under gradually developing fires but were unable to do so in more severe scenarios. **For intense fires with fast or ultra-fast α values, even three teams of responders could not complete the task in time. Since the fire was too intense to implement the rescue.***
