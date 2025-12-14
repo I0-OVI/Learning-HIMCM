@@ -66,7 +66,7 @@ As shown in the following graph, the modeling process is illustrated using a wor
 **Your Model**
 The visualization is to simplify or summarize your content. So, it doesn't follow a very strict sequential flow. The only thing is to help reader understand your model. Alternatively, some teams prefer to present their work using many equations. There is a [report](./report/14995.pdf) (*Team #14995*) for [2024 problem A](./problem/2024_HiMCM_Problem_A.pdf) which is filled with mathematical derivation. If you like derivation-style explanation, you could learn from this report. Everyone has his/her preferred style to illustrate the problem. Personally, I recommend the visualization since my math is not strong enough and visualization is clear for me.
 
-Take some examples when illustrating your model:
+Take some examples when illustrating your model:  
 [2025 problem A](./problem/2025_HiMCM_Problem_A.pdf) <br>
 For this problem, our team first abstract the problem as a graph theory problem. Each room is abstracted as a node and the hallway connecting two room was represented as an edge. The weights of edges corresponds to the time required to travel between two rooms.The following graph illustrate how this method works.
 <img src="./picture/5.png">
