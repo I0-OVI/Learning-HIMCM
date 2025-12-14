@@ -8,16 +8,16 @@
 
 ### Introduction
 **1.1 Background**
-This part should *brief restate the problem* that posed by HIMCM. It should explain why problem is important and model is required. Also, you could give a brief conclusion of your model.
+This part should *brief restate the problem* that posed by HIMCM. It should explain why problem is important and model is required. Also, you could give a brief conclusion of your model.  
 **1.2 Problem Restatement**
-It seems to be similar to the Background part. But this part is asked you to fully list the *questions or tasks required by the problem*. It may include one question and a summary of related model.
+It seems to be similar to the Background part. But this part is asked you to fully list the *questions or tasks required by the problem*. It may include one question and a summary of related model.  
 **1.3 Assumption and Justification**
 This section illustrate your assumptions while building the model. This because the model is theoretical which could not consider all the factor in the real world. 
 Take an example: There is a problem about evacuation of firefighters in a building. If you want to simulate the behavior of them using a ABM (Agent-Based Model), you may ignore the destroy of construction of the building when rescuing. So, we have to write this in the assumption section and give a reason for why we ignore it. 
 
 **Case Study**
-[2024 Problem A](./problem/2024_HiMCM_Problem_A.pdf)
-I take the above part from the outstanding paper (*Team #15926*)
+[2024 Problem A](./problem/2024_HiMCM_Problem_A.pdf)  
+I take the above part from the outstanding paper (*Team #15926*)  
 This problem asked teams to choose several type of sports which will be added to next Olympic games. We have to build the model based on these factors:*Popularity and Accessibility*, *Gender Equity*, *Sustainability*, *Relevance and Innovation* and *Safety and Fair Play*. Let's start from **Background**.
 >The Olympic Games have long served as the world's most powerful symbol of athletic
 values and diversity. But as the dynamics of global sports and audience interest is
@@ -45,20 +45,20 @@ There are various ways to illustrate models but we have to illustrate with clear
 [2022 Problem A](./problem/2022_HiMCM_Problem_A.pdf)
 I take one of the outstanding paper's content of model explanation(*Team # 12821*).
 ```
-2 Population model
-2.1 Variable
-2.2 Baseline Model 
-2.2.1 Model Setup
-2.2.2 Allee effect
-2.2.3 Critical and Maximum Sustainable Population
-2.2.4 Parameter Calibration and Model Results
-2.3 With Virus 
-2.3.1 Model Setup
-2.3.2 Parameter Calibration and Model Results
-2.4 Seasonality
-2.4.1 The Lifespan With Seasonal Change
-2.4.2 The Fertility With Seasonal Change
-2.4.3 Parameter Calibration and Model Results
+2 Population model  
+2.1 Variable  
+2.2 Baseline Model   
+2.2.1 Model Setup  
+2.2.2 Allee effect  
+2.2.3 Critical and Maximum Sustainable Population  
+2.2.4 Parameter Calibration and Model Results  
+2.3 With Virus  
+2.3.1 Model Setup  
+2.3.2 Parameter Calibration and Model Results  
+2.4 Seasonality  
+2.4.1 The Lifespan With Seasonal Change  
+2.4.2 The Fertility With Seasonal Change  
+2.4.3 Parameter Calibration and Model Results  
 ```
 In this problem, teams are asked to predict population of one honey bee colony based on different factors such as lifespans, egg laying rates, fertilized/unfertilized egg ratios. This represents standard workflow: starting with a primary model and then adding factors to model to meet the requirements. 
 In section *2.2.2*, this team highlighted an essential principle: the **Allee effect**. This principle forms the theoretical foundation of their formulae and algorithms, so it has to be explained clearly and briefly in report. When our model relies on a scientific principle, we must introduce it and explain the relevance.
