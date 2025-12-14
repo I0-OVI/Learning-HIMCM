@@ -12,7 +12,7 @@ First of all, I asked chatGPT for some data.
 
 >Foraging bees typically make 7–13 flights per day, with an average of about 10 flights under favorable conditions, and each trip lasting roughly 30–45 minutes. A healthy colony in peak season commonly contains around 50,000 bees. These values provide a realistic baseline for modeling hive activity and foraging dynamics. However, because only a fraction of the colony actively forages at any given time and environmental factors such as flower availability, season, and weather strongly influence behavior, these parameters should be treated as approximate averages. Using them as input, the model can generate plausible estimates while acknowledging natural variability and the need for data calibration and sensitivity analysis.
 
-Let's compare with *team #12821*'s data calibration.
+Let's compare with *Team #12821*'s data calibration.
 >Each bee forage for food with 10 flights per day [17], so the average time of each flight is 0.1 days, $h=0.4$,$p=0.35$ [12], and $f$ is 20% [24]. The bee population N of a typical hive we selected is 60,000 since most of the blossoms occur in spring.
 We calculate the value of $k$ by implementing the $H_{resource}$ and number of hives which is 51, into our model [12]. The value of $k$ we obtained is $4.17 × 10^{−5}$. Then, we utilize these parameters to calculate the number of hives needed for various types of crops in 81000 square meters.
 
@@ -23,7 +23,7 @@ In order to observe the difference, the following table could clearly illustrate
 |Duration per flight                |0.02–0.03 days (~30–45 min)|0.1 days (~2.4 h)                  |
 |Hive population $N$                |40,000–50,000              |60,000                             |
 |Nectar to honey production rate $h$|0.3–0.35                   |0.4                                |
-|$\frac{\text{Amount of honeybee-produced-honey}}{\text{All the honey produced}}\; p$|0.25–0.3|0.35 |
+|$\frac{\text{Amount of honeybee-produced-honey}}{\text{All the honey produced}} p$|0.25–0.3|0.35 |
 |Population of foragers             |15–25%                     |20%                                |
 
 From the table above, *duration per flight*, *hive population* and *the nectar to honey production rate* is out of the range provided by chatGPT. So, it is clear that the value evaluated by chatGPT for most of time is broadly reasonable but we still have to check with published datasets or experimental research to ensure reliability and the realism of data.

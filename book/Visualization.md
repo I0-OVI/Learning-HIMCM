@@ -100,3 +100,31 @@ From our team (*Team #16985*)
     <img src="./picture/16.png" width = "80%">
 
 >*With further analysis, we compared the rescue time of a single firefighting team with the smoke spread time corresponding to the human tolerance threshold. Two responders were generally able to complete the rescue under gradually developing fires but were unable to do so in more severe scenarios. **For intense fires with fast or ultra-fast α values, even three teams of responders could not complete the task in time. Since the fire was too intense to implement the rescue.***
+
+
+#### Python Program
+In order to generate the charts using python, I give an example structure to generate a heatmap. Alternatively, the AI assistant could help you to write the code.
+```python
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+import os
+
+path="C:\\...\...\..."
+os.chdir(path)
+
+# Load data
+df = pd.read_csv("table/1.csv")
+
+# Create heatmap
+plt.figure(figsize=(8,6))
+sns.heatmap(df.corr(), annot=True, cmap="coolwarm")
+
+# Save the figure before showing it
+plt.savefig("xxx.png", 
+            dpi=300, 
+            bbox_inches="tight")
+
+# Display the figure
+plt.show()
+```
