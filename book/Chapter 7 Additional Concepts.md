@@ -18,4 +18,11 @@ $$ Precision=\frac{TP}{TP+FP}\;\; Recall=\frac{TP}{TP+FN} $$
 
 #### Common model
 **Analytic Hierarchy Process (AHP)**
-In this part, we introduce a high-level scoring method called *Analytic Hierarchy Process (AHP)*. This method allows the integration of multiple perspectives from different experts on various factors, and generates a consistent and comprehensive weight system for the scoring process.
+In this part, we introduce a high-level scoring method called *Analytic Hierarchy Process (AHP)*. This method allows the integration of multiple perspectives from different experts on various factors, and generates a consistent and comprehensive weight system for the scoring process. The following chart could clearly show the process of this method.
+
+<p align = "center">
+    <img src="./picture/17.png" width="80%">
+
+As for the detailed process, let's take the above charts as an example, we have four factors/criterion which determines the most optimal sport: H, P, F and S. Each expert may have different perspective to the importance of these criterions.For each matrix, diagonal elements are 1 (self-comparison), and off-diagonal elements are assigned values such as 3, 5, 7, 9 to indicate increasing importance, with reciprocals (1/3, 1/5, 1/7, 1/9) for the opposite direction. These matrices are combined to form the final comparing matrix by taking the geometric average, shown as following formula.
+$$a_{i,j}^{combined}=(\prod_{k=1}^m \; a_{i,j}^k )^{1/m}$$
+where $m$ represents the number of experts and k represents the index of the current expert whose score is being considered。
