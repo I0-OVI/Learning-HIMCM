@@ -13,7 +13,7 @@ Accuracy alone is often insufficient to evaluate a classification model, especia
 It is easy to understand the table. Take *False Negative(FN)* as an example, this occurs when the actual condition is positive, but the model incorrectly predicts it as negative. When improving a model, a common optimization goal is to maximize accuracy. However, depending on the scenario, other metrics such as **Recall** and **Precision** can also be used to guide optimization.
 It is hard to use language to express the real meaning of them. I show them in math formulae:
 
-$$ Precision=\frac{TP}{TP+FP}\;\; Recall=\frac{TP}{TP+FN} $$
+$$ Precision=\frac{TP}{TP+FP}  Recall=\frac{TP}{TP+FN} $$
 
 **Precision** represents how many results are predicted to be positive where the labels are positive. And **recall** refers to how many results are predicted to be positive for all the positive labeled samples. Here, there must be some confusion. In precision, "labels are positive" means the prediction result is positive. In recall, "positive labeled samples" means the reference result is positive. The distinction can be confusing at first, but it becomes clear when you refer to the confusion matrix above.
 
@@ -26,7 +26,9 @@ In this part, we introduce a high-level scoring method called *Analytic Hierarch
     <img src="./picture/17.png" width="80%">
 
 As for the detailed process, let's take the above charts as an example, we have four factors/criterion which determines the most optimal sport: H, P, F and S. Each expert may have different perspective to the importance of these criterions.For each matrix, diagonal elements are 1 (self-comparison), and off-diagonal elements are assigned values such as 3, 5, 7, 9 to indicate increasing importance, with reciprocals (1/3, 1/5, 1/7, 1/9) for the opposite direction. These matrices are combined to form the final comparing matrix by taking the geometric average, shown as following formula.
+
 $$a_{i,j}^{combined}=(\prod_{k=1}^m \; a_{i,j}^k )^{1/m}$$
+
 where $m$ represents the number of experts and k represents the index of the current expert whose score is being considered.
 
 The following steps are normalization and weight calculation. Normalization is the process of converting the values in the comparison matrix to a common scale so that they can be meaningfully compared. Typically, each column in the matrix is divided by its column sum, so that the sum of each column equals 1. After that, averaging each row gives the relative weight of each criterion. After normalizing the combined matrix, the relative weight of each criterion is obtained by averaging the values in each row. These weights represent the overall importance of each criterion in the decision-making process.
