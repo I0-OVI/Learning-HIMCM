@@ -13,7 +13,7 @@ Accuracy alone is often insufficient to evaluate a classification model, especia
 It is easy to understand the table. Take *False Negative(FN)* as an example, this occurs when the actual condition is positive, but the model incorrectly predicts it as negative. When improving a model, a common optimization goal is to maximize accuracy. However, depending on the scenario, other metrics such as **Recall** and **Precision** can also be used to guide optimization.
 It is hard to use language to express the real meaning of them. I show them in math formulae:
 
-$$ Precision=\frac{TP}{TP+FP}  Recall=\frac{TP}{TP+FN} $$
+$$ Precision=\frac{TP}{TP+FP} \qquad  Recall=\frac{TP}{TP+FN} $$
 
 **Precision** represents how many results are predicted to be positive where the labels are positive. And **recall** refers to how many results are predicted to be positive for all the positive labeled samples. Here, there must be some confusion. In precision, "labels are positive" means the prediction result is positive. In recall, "positive labeled samples" means the reference result is positive. The distinction can be confusing at first, but it becomes clear when you refer to the confusion matrix above.
 
