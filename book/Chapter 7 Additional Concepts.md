@@ -3,7 +3,7 @@
 
 
 
-#### Confusion Matrix
+### Confusion Matrix
 Accuracy alone is often insufficient to evaluate a classification model, especially when the dataset is imbalanced or when different types of errors have different consequences. To better understand how predictions differ from ground truth, we introduce the confusion matrix. The confusion matrix is a common tool used to compare a model’s predictions with the actual outcomes, shown as follow.
 |                        |Positive (Prediction)| Negative     |
 |------------------------|---------------------|--------------|
@@ -17,9 +17,46 @@ $$ Precision=\frac{TP}{TP+FP} \qquad  Recall=\frac{TP}{TP+FN} $$
 
 **Precision** represents how many results are predicted to be positive where the labels are positive. And **recall** refers to how many results are predicted to be positive for all the positive labeled samples. Here, there must be some confusion. In precision, "labels are positive" means the prediction result is positive. In recall, "positive labeled samples" means the reference result is positive. The distinction can be confusing at first, but it becomes clear when you refer to the confusion matrix above.
 
+### Data processing
+In previous chapter "writing methodology", I have mentioned a common paradigm of data processing: data washing-- identify patterns -- feature engineering --choosing model. In this section, we briefly introduce several useful techniques that can be applied in these steps.
 
-#### Common model
-**Analytic Hierarchy Process (AHP)**
+#### Orthogonal decomposition
+
+In many cases, highly correlated (no matter positively or negatively) features often lead to unstable models and redundant information. One effective way to address this issue is to transform the original features into a new set of **orthogonal (uncorrelated) features** through linear transformations. This idea is widely used in feature engineering, especially in methods such as Principal Component Analysis (PCA).
+
+Suppose we have a dataset with $m$ features and $n$ observations. To implement PCA, the data can be represented as a matrix $ X \in \mathbb{R}^{n \times m} $, where each row corresponds to one observation and each column corresponds to one feature.
+
+The first step of PCA is **centering** the data. This is done by subtracting the mean of each feature from the original matrix:
+$$\bar X = X - \mathrm{mean}(X)$$
+where $ \mathrm{mean}(X) $ denotes the vector of column-wise means.
+
+
+Next, the covariance matrix of the centered data is computed:
+
+$$\mathrm{Cov}(\bar X) = \frac{1}{n} \bar X^T \bar X$$
+
+where $\bar X^T$ denotes the transpose of $\bar X$. In some literature, the covariance matrix is also denoted by $\Sigma$.
+
+
+The principal components are obtained by performing eigenvalue decomposition
+on the covariance matrix:
+
+$$\mathrm{Cov}(\bar X)\, v_i = \lambda_i v_i$$
+
+where $\lambda_i$ is the eigenvalue corresponding to the eigenvector $v_i$. Each eigenvector represents a direction in feature space, and its eigenvalue indicates the amount of variance captured along that direction.
+
+All eigenvectors $v_i$ form an orthogonal matrix $V$. The final step is to project the centered data onto these orthogonal directions, resulting in a new feature matrix:
+
+$$Z = \bar X V$$
+
+The matrix $Z$ contains the transformed features, which are mutually uncorrelated and ordered by their explained variance.
+
+Although PCA is not commonly used in modern machine learning pipelines since many
+tree-based models and deep learning models could implicitly handle feature correlations,
+it becomes powerful when dimensionality reduction is required. In particular， PCA is useful when we want to reduce the dimension space from $n$ dimension to $k$ dimension where $n>k$. In simple terms, we apply this method when we want to have only k features whereas we have n observed features in the original dataset.
+
+### Common model
+#### Analytic Hierarchy Process (AHP)
 In this part, we introduce a high-level scoring method called *Analytic Hierarchy Process (AHP)*. This method allows the integration of multiple perspectives from different experts on various factors, and generates a consistent and comprehensive weight system for the scoring process. The following chart could clearly show the process of this method.
 
 <p align = "center">
@@ -32,3 +69,5 @@ $$a_{i,j}^{combined}=(\prod_{k=1}^m \; a_{i,j}^k )^{1/m}$$
 where $m$ represents the number of experts and k represents the index of the current expert whose score is being considered.
 
 The following steps are normalization and weight calculation. Normalization is the process of converting the values in the comparison matrix to a common scale so that they can be meaningfully compared. Typically, each column in the matrix is divided by its column sum, so that the sum of each column equals 1. After that, averaging each row gives the relative weight of each criterion. After normalizing the combined matrix, the relative weight of each criterion is obtained by averaging the values in each row. These weights represent the overall importance of each criterion in the decision-making process.
+
+
