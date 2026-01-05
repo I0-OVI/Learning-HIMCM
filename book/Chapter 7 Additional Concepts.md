@@ -17,11 +17,21 @@ $$ Precision=\frac{TP}{TP+FP} \qquad  Recall=\frac{TP}{TP+FN} $$
 
 **Precision** represents how many results are predicted to be positive where the labels are positive. And **recall** refers to how many results are predicted to be positive for all the positive labeled samples. Here, there must be some confusion. In precision, "labels are positive" means the prediction result is positive. In recall, "positive labeled samples" means the reference result is positive. The distinction can be confusing at first, but it becomes clear when you refer to the confusion matrix above.
 
+Now, let's see how accuracy is calculated and you will know what is the difference between these indicators.
+$$Accuracy=\frac{TP+TN}{TP+TN+FP+FN}$$
+Unlike precision and recall, which focus primarily on true positive cases, accuracy
+optimizes both true positives (TP) and true negatives (TN). As a result, its value can
+be dominated by the majority class.
 
+Considering a medical diagnose task where only 1% of patients has the certain disease. Since accuracy optimize both TP and TN, it is easy for the model to fail to predict 1% of patient who actually has disease and achieve 99% accuracy by returning all patients are healthy. Therefore, accuracy alone fails to reflect the model’s ability to detect positive cases.
 
+In several cases where failing predicting positive cases are costly, such as emergency prediction or disease detection ,recall and precision become more informative and should be prioritized.
 
 ### Data processing
 In previous chapter "writing methodology", I have mentioned a common paradigm of data processing: data washing-- identify patterns -- feature engineering --choosing model. In this section, we briefly introduce several useful techniques that can be applied in these steps.
+
+#### Filtering gaps
+🚧
 
 #### Orthogonal decomposition
 
@@ -54,10 +64,9 @@ $$Z = \bar X V$$
 
 The matrix $Z$ contains the transformed features, which are mutually uncorrelated and ordered by their explained variance.
 
-Although PCA is not commonly used in modern machine learning pipelines since many
-tree-based models and deep learning models could implicitly handle feature correlations,
-it becomes powerful when dimensionality reduction is required. In particular， PCA is useful when we want to reduce the dimension space from $n$ dimension to $k$ dimension where $n>k$. In simple terms, we apply this method when we want to have only k features whereas we have n observed features in the original dataset.
-
+Although PCA is not commonly used in modern machine learning pipelines since many tree-based models and deep learning models could implicitly handle feature correlations, it becomes powerful when dimensionality reduction is required. In particular,PCA is useful when we want to reduce the dimension space from $m$ dimension to $k$ dimension where $m>k$. In simple terms, we apply this method when we want to have only $k$ features whereas we have $m$ observed features in the original dataset. In order to achieve this, we would have the similar process as normal PCA and what different is to select top $k$ features before the creation of the $V$ matrix. The number of retained components is typically determined by the explained variance ratio:
+$$\frac{\sum_{i=1}^{k} \lambda _i}{\sum_{i=1}^{m} \lambda _i} \geq 95%$$
+where $k$ denotes the number of retained components, $m$ is the total number of features, and $\lambda_i$ are the eigenvalues obtained from $\mathrm{Cov}(\bar X)\, v_i = \lambda_i v_i$.
 ### Common model
 #### Analytic Hierarchy Process (AHP)
 In this part, we introduce a high-level scoring method called *Analytic Hierarchy Process (AHP)*. This method allows the integration of multiple perspectives from different experts on various factors, and generates a consistent and comprehensive weight system for the scoring process. The following chart could clearly show the process of this method.
