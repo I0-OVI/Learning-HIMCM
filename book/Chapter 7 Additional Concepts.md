@@ -30,8 +30,13 @@ In several cases where failing predicting positive cases are costly, such as eme
 ### Data processing
 In previous chapter "writing methodology", I have mentioned a common paradigm of data processing: data washing-- identify patterns -- feature engineering --choosing model. In this section, we briefly introduce several useful techniques that can be applied in these steps.
 
-#### Filtering gaps
+#### Handling Missing Values
 🚧
+Missing values commonly occur in real-world datasets due to certain reasons. In order to apply a suitable model on this dataset, we firstly need to fill the gaps. Although this step could be resolved by AI assistant, I highly recommend you to understand the basic principle of it. Mode, median and mean are the commonly used indicators. Let's see where they should be used in [this table](./table/1.csv).
+
+**Mean** and **median** filling are mainly used for numerical features. However, some caution is required. For columns such as *Food Court* and *ShoppingMall* in this table, where values vary significantly and a large number of entries are zero, mean filling is not a good choice, since a few extreme values may distort the result. In such cases, median filling is more robust. On the other hand, for features like *age*, which usually follow normal distribution or other distribution, mean filling usually works well and preserves the overall data distribution. **Mode filling** is mainly used for categorical features, such as *Destination*, *Cabin*, or *Cryosleep*. Let’s first look at *Destination* and *Cabin*. These features are pure categories and applying mean or median filling is meaningless, even if these categories have been quantized. (Quantization is a very important concept and I will introduce it later.) Numerical operations do not carry semantic meaning for categorical data. Features like *Cryosleep* are boolean values meaning they only take two values (*True or False*). For this reason, mean filling may produce a real number, which has no practical interpretation. Although median filling method may return a valid value within the column, it is still not appropriate since the ordering of boolean value does not reflect significance and it is not representative enough. 
+
+
 
 #### Orthogonal decomposition
 
@@ -65,7 +70,9 @@ $$Z = \bar X V$$
 The matrix $Z$ contains the transformed features, which are mutually uncorrelated and ordered by their explained variance.
 
 Although PCA is not commonly used in modern machine learning pipelines since many tree-based models and deep learning models could implicitly handle feature correlations, it becomes powerful when dimensionality reduction is required. In particular,PCA is useful when we want to reduce the dimension space from $m$ dimension to $k$ dimension where $m>k$. In simple terms, we apply this method when we want to have only $k$ features whereas we have $m$ observed features in the original dataset. In order to achieve this, we would have the similar process as normal PCA and what different is to select top $k$ features before the creation of the $V$ matrix. The number of retained components is typically determined by the explained variance ratio:
+
 $$\frac{\sum_{i=1}^{k} \lambda _i}{\sum_{i=1}^{m} \lambda _i} \geq 95%$$
+
 where $k$ denotes the number of retained components, $m$ is the total number of features, and $\lambda_i$ are the eigenvalues obtained from $\mathrm{Cov}(\bar X)\, v_i = \lambda_i v_i$.
 ### Common model
 #### Analytic Hierarchy Process (AHP)
