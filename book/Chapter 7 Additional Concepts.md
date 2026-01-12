@@ -47,11 +47,13 @@ In order to address this, I would introduce **embedding**. Instead of representi
 
 In many cases, highly correlated (no matter positively or negatively) features often lead to unstable models and redundant information. One effective way to address this issue is to transform the original features into a new set of **orthogonal (uncorrelated) features** through linear transformations. This idea is widely used in feature engineering, especially in methods such as Principal Component Analysis (PCA).
 
-Suppose we have a dataset with $m$ features and $n$ observations. To implement PCA, the data can be represented as a matrix $ X \in \mathbb{R}^{n \times m} $, where each row corresponds to one observation and each column corresponds to one feature.
+Suppose we have a dataset with $m$ features and $n$ observations. To implement PCA, the data can be represented as a $n \times m$ matrix with real values, where each row corresponds to one observation and each column corresponds to one feature.
 
 The first step of PCA is **centering** the data. This is done by subtracting the mean of each feature from the original matrix:
-$$\bar X = X - \mathrm{mean}(X)$$
-where $ \mathrm{mean}(X) $ denotes the vector of column-wise means.
+
+$$\bar X = X - \text{mean}(X)$$
+
+where $ \text{mean}(X) $ denotes the vector of column-wise means.
 
 
 Next, the covariance matrix of the centered data is computed:
