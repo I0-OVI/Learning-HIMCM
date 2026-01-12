@@ -53,7 +53,7 @@ The first step of PCA is **centering** the data. This is done by subtracting the
 
 $$\bar X = X - \text{mean}(X)$$
 
-where $ \text{mean}(X) $ denotes the vector of column-wise means.
+where $\text{mean}(X)$ denotes the vector of column-wise means.
 
 
 Next, the covariance matrix of the centered data is computed:
