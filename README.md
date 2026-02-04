@@ -1,6 +1,6 @@
 # Learning-HIMCM
 
-This repository is a learning resource for mathematical modeling competitions (HiMCM/IMMC) (High School Mathematical Contest in Modeling/International Mathematical Modeling Contest). It includes guidance on data collection, model selection, visualization techniques, and report writing methodology. So far, I have entered three math modeling competition including 2 HIMCM  and 1 IMMC. I thought I am experienced enough to share something.
+This repository is a learning resource for mathematical modeling competitions (HiMCM/IMMC) (High School Mathematical Contest in Modeling/International Mathematical Modeling Contest). It includes guidance on data collection, model selection, visualization techniques, and report writing methodology. So far, I have entered three math modeling competition including 2 HIMCM  and 2 IMMC. I thought I am experienced enough to share something.
 
 1. [Preparation](./book/Chapter%201%20Preparation.md)
 2. [Data Collection and Analysis](./book/Chapter%202%20Data%20Collection%20and%20Analysis.md)
