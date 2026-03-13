@@ -25,3 +25,27 @@ RL offers several advantages, including **(1)** learning from experience, where 
 However, unfortunately, they fail to apply this method to more complex scenarios. As a result, they eventually incorporated an Agent-Based Model (ABM) to simulate fire spread and responder movement. They came very close to producing the real-world optimal solution. If we were to further develop this approach, one possible improvement would be to expose the RL agent to increasingly complex and scaled-up environments during training. For example, the agent could be trained using procedurally generated floor plans and dynamic hazards like the spread of fire and smoke. Maybe we could design scenarios which are difficult to handle using traditional search algorithms like A* or ABM. Let's take some analysis for these algorithms. A* algorithm performs best in the static and known maze.(I would called the sweeping building as maze later.) However, when we go further in this problem, we would found that fire and smoke would spread which extremely affects the strategy of sweeping. While ABM could better capture real-world dynamics, it requires more computation since decisions are made for each step. As a result, ABM is struggling to scale up to very large maze.
 
 In summary, no single model is universally optimal. Each algorithm has its own strengths and limitations, which become apparent under different problem settings. Rather than searching for a perfect model, a more effective strategy is to identify the problem characteristics and introduce reasonable assumptions to specialize the scenario. By doing so, the chosen model could operate within conditions that highlight its advantages, while its weaknesses become less influential. 
+
+
+### Whether a Model is good ?
+The paragraphs above illustrate trade-off when choosing model. In this section, I want to show you how to evaluate a model is good for current circumstance.
+
+First, I want you to see the following graph.
+
+<p align='center'>
+<img src="./picture/18.png">
+
+This picture works for [2026 IMMC International Round](./problem/2026_IMMC_International_Problem.pdf). This chart illustrates the influence of extreme weather on different species. The colored regions represent the habitats where the species are distributed. Darker colors indicate areas with higher species density, while lighter colors represent regions with lower concentrations.
+
+
+
+Here is the question: Could you find the difference of 3 rows of pictures ? 
+
+Some of you might suggest that the strategy is robust enough so that extreme weathers have nearly no effect to species. However, I told you one of extreme weather scenario represents 20% reduction in water resources, Would it still be reasonable to believe that a strategy relying only on human patrols and drone deployment could maintain nearly unchanged species populations?
+
+Consider a simple analogy. Suppose you are a teacher designing an exam, and every student receives a very high score. In this case, the test fails to distinguish between students with different levels of understanding. Such a test is non-discriminative and therefore not very useful for evaluation. 
+
+The same issue can occur in mathematical modeling. If a model produces nearly identical results under very different scenarios, it may indicate that the model lacks the ability to distinguish between conditions. A good model should be sensitive enough to reflect meaningful differences in inputs or environmental changes.
+
+Back to the exam example, a well-designed test should produce a reasonable distribution of scores that reflects differences in student performance. Ideally, the score distribution should resemble a normal distribution, where students with different abilities are clearly distinguishable. Similarly, a good model should produce results that meaningfully respond to changes in key parameters or assumptions.
+
